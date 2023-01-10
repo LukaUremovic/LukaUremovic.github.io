@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <title>Općenito o zvijezdama</title>
+    <link rel="icon" type="image/x-icon" href="slike/logo.png">
+
+    <style>
+        @namespace url("http://www.w3.org/1999/xhtml");
+        :root{ scrollbar-color: rgb(210,210,210) rgb(42,42,46) }    
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scrollbar-width: thin;
+        }
+        html{
+            height: 100%;
+            width: 100%;
+            font-family: Arial;
+        }
+        body{
+            
+            height: 100%;
+            width: 100%;
+
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("slike/opć(1).jpg");
+             /* background: linear-gradient(#210535,#f5d5e0);*/
+            background-repeat:repeat;
+            background-size: cover;
+
+        }
+
+        /* GRID MREŽA */
+        .grid-container{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-areas:
+            'rječnik nav_bar nav_bar nav_bar nav_bar'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'footer footer footer footer footer';
+
+            gap: 6rem 2rem ;
+
+        }
+                /* .grid-container > div{
+                background-color: rgba(71, 125, 125,0.5);
+        }        */
+
+
+        /* RJEČNIK */
+        .rječnik{
+            margin-left: 2.5rem;
+            grid-area: rječnik;
+        }
+        .dropdown{
+            position: fixed;
+            display: inline-block;
+        }
+        .dropdown-riječi{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 10rem;
+            box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+            border-radius: 5%;
+            z-index: 1;
+        }
+        .dropdown-riječi a{
+            color: black;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+        }
+        .dropbtn{
+            text-align: center;
+            padding: 0.4rem;
+            border-radius: 62.42rem;
+            background-color: transparent;
+            border: transparent;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 2.5rem;
+            margin-top: 0.8rem;
+            cursor: pointer;
+            outline: aquamarine solid 0.37rem;
+        }
+
+
+        /*NAV BAR*/
+        .Nav_bar{
+            width: auto;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 2.5rem;
+            margin-top: 1%;
+            grid-area: nav_bar;
+            
+        }
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        li a{
+            color: white;
+            font-size: 2.5rem ;
+            padding: 0px 18px;
+            text-decoration: none;
+        }
+        li  a:hover{
+            color: aquamarine;
+            text-decoration: underline;
+        }
+        li a:active{
+            color: white;
+        }
+        .dropbtn:hover{
+            color: #cdcdf7;
+            text-decoration: none;
+        }
+        .dropdown-riječi a:hover {background-color: #e6e6e6}
+
+        .dropdown:hover .dropdown-riječi {
+        display: block;
+        right: -0.8rem;
+        
+        }
+
+        /* TEKSTOVI */
+        .tekstovi{
+        color: rgb(239, 235, 226);
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        text-align: center;
+        margin-right: 6.5rem;
+
+        grid-area: tekstovi;
+        }
+
+        figure{
+            padding: 2rem;
+        }
+        figcaption{
+            font-family: 'Sherif';
+            font-size: 1.3rem;
+        }
+
+        .footer{
+            grid-area: footer;
+            text-align: center;
+            margin-right: 8rem;
+            font-size: 1rem;
+            color: white;
+            
+            
+
+            /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) */
+        }
+
+        #pokrovitelj{
+            color: #FFFF66;
+        }
+
+        .images{   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            width: 25em;
+            height: auto;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="Nav_bar">
+            <ul>
+                <li> <a href="Početna.html" target="_self">Početno</a> </li>
+                <li> <a href="#home" target="_self" style="color:aquamarine;">Općenito</a> </li>
+                <li> <a href="Formacija.html" target="_self">Formacija</a> </li>
+                <li> <a href="Građa.html" target="_self">Građa</a> </li>
+                <li> <a href="Vrste.html" target="_self">Vrste</a> </li>
+            </ul>
+        </div>
+        <div class="rječnik">
+            <div class="dropdown">
+                <button class="dropbtn" type="button">Rječnik</button>
+                <div class="dropdown-riječi">
+                    <a href="#">Plazma</a>
+                    <a href="#">Svjetlosna godina</a>
+                    <a href="#">Svjetlosno onečišćenje</a>
+                    <a href="#">Optički interferometar</a>
+                    <a href="#">Zvjezdani vjetar</a>
+                    <a href="#">Zvjezdana maglica</a>
+                    <a href="#">Zvjezdane baklje</a>
+                    <a href="#">Koronalni izbačaji mase</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="tekstovi">
+            <p1> Zvijezde su svemirska globoidna, odnosno kuglasta tijela načinjena prvenstveno od plazme, ali i od plinova. Golim ih okom sa planeta Zemlje
+                možemo vidjeti samo noću i to samo one zvijezde koje se nalaze u našoj galaksiji, Miječnoj stazi. No usprkos tomu što vidimo samo nama najbliže zvijezde
+                u našoj galaksiji, idalje ih vidimo samo kao male točke svjetlosti jer se čak i ona nama najbliža zvijezda, nakon Sunca, <i>Proxima Centauri</i>
+                nalazi na udaljenosti većoj od čak 40,208,000,000,000 km, tj. na udaljenosti od približno 4,246 svjetlosnih godina. Ovisno o svjetlosnom onečišćenju prosječno
+                se ljudskim okom može vidjeti oko 6000 zvijezda, a uporabom modernih teleskopa možemo ih vidjeti i više od milijarde. <br> <br>
+                <figure class="polucija">
+                    <img src="slike/polucija.jpg" alt="Pogled na zvijezde ovisno o stupnju svjetlosnog onečišćenja"
+                    style="width: 40%; height: auto;" >
+                    <figcaption>Vidljivost zvijezda pri različitim stupnjevima svjetlosnog onečišćenja</figcaption>
+                </figure>
+                <br> <br> <br>
+            </p1>
+            <p2>
+                Zvijezde najčešće nalazimo u skupinama zbog toga što su se zajedno formirale, a one mogu biti različitih veličina i prema njima dobivaju i različite nazive.
+                Ti zvjezdani skupovi mogu biti otvoreni ili zatvoreni. Otvoreni su najčešće spiralni krakovi galaksija, a zatvorene pronalazimo bliže
+                središtu galaksije kojeg zvijezde okružuju i stvaraju zatvorene, kuglaste ili globularne oblike. Te skupine mogu činiti i preko petnaestak tisuća
+                zvijezda, a najstarije su otkrivene upravo u onim zatvorenim zvjezdanim skupinama u blizini središta galaksije. <br> <br>
+                <div class="images">
+                    <figure>
+                        <img src="slike/kuglasti.jpg" alt="Prikaz zatvorenog zvjezdanog skupa" >
+                        <figcaption>Zatvoreni zvjezdani skup, klaster <i>Hercules</i></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="slike/otvoreni.jpg" alt="Prikaz otvorenog zvjezdanog skupa" >
+                        <figcaption>Otvoreni zvjezdani skup, klaster <i>Pleiades</i></figcaption>
+                    </figure>
+                </div>
+                
+                <br> <br> <br>
+            </p2>
+            <p3>
+                Spomenuvši kako zvijezde stvaraju zvijezdane skupove različitih oblika, ali i veličina, možemo si postaviti pitanje mogu li i same zvijezde,
+                pojedinačno, biti različitih oblika i volumena? Vjerujem da ste na drugi dio pitanja vezanog za volumen vrlo brzo dali potvrdan odgovor, no osim
+                volumena kod različitih zvijezda mijenja se i njihov oblik ovisno o brzini njihove rotacije oko vlastite osi. Zvijezde koje se vrte sporije bit
+                će više nalik kugli, dok će one koje se vrte brže biti spljoštene na polovima i poprimit će izduljeni elipsoidni oblik. Tako će se dakle mijenjati
+                i radijus zvijezdi, a duljine se radijusa zvijezda mjere optičkim interferometrom. <br><br>
+                <div class="images">
+                    <figure>
+                        <img src="slike/sunce.jpg" alt="Sunce" >
+                        <figcaption>Kuglasta zvijezda, <i>Sunce</i></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="slike/acher.jpg" alt="Achernar" >
+                        <figcaption>Spljoštena zvijezda, <i>Achernar</i></figcaption>
+                    </figure>
+                </div>
+                <br> <br> <br>
+            </p3>
+            <p4>
+                Već se i na ovim slikama može uočiti još jedna od karakteristika zvijezda koja se mijenja od zvijezde do zvijezde, a to je boja. Boja zvijezda
+                ovisi o njihovoj površinskoj temperaturi, dok ta temperatura ovisi o starosti zvijezde, tj. količini prisutnih nuklearnih reakcija, i
+                njezinoj masi prema poznatoj Einsteinovoj relaciji, <i>E=mc<sup>2</sup></i>, koja nam pokazuje da tijelo ima i zrači većom energijom,
+                u ovom slučaju toplinom, što mu je masa veća. Temperatura može varirati od 1 000 kelvina pa sve, a i više od 200 000 kelvina. Toplije zvijezde
+                emitiraju elektromagnetske valove kraćih valnih duljina, koji imaju više energije, a naše ih oči prepoznaju kao plavu boju, dok hladnije zvijezde
+                emitiraju elektromagnetske valove duljih valnih duljina, koji imaju manje energije pa ih naše oči reprezentiraju toplijim bojama (žutom, narančastom, ...).
+                Stoga Sunce i je narančasto-crvenkaste boje jer ima temperaturu od 5778 K i relativno je hladno, dok je zvijezda Achernar plavija jer dostiže temperature
+                u rasponu od 10 000 K do 20 000K. <br><br>
+            </p4>
+            <p5>
+                Znanstvenici su zvijezde, ovisno o boji kojom zrače i površinskoj temperaturi, podijelili u 7 osnovnih spektralnih razreda: O, B, A, F, G, K i M.
+                Zvijezde O razreda (> 33 000K) najtoplije su i najplavije, dok su zvijezde M skupine najhladnije i najcrvenije (2 600-3 850 K). Prema toj klasifikaciji
+                zvijezda <i>Achernar</i> pripada skupini B (10 500-30 000K), Sunce skupini G (5 500-6 000 K), a na početku spomenuta najbliža zvijezda našem solarnom sustavu,
+                <i>Proxima Centauri</i> skupini M, sa temepaturom od oko 3 000K. <br> <br> 
+            </p5>
+            <p6>
+                Sjedeće važno obilježje zvijezda je njihova korona, odnosno tanki i rijetki sloj koji odvojeno od same površine zvijezde povrh atmosfere, obavija istu.
+                Temperatura u koroni dostiže i milijune kelvina, a važna je jer se iz nje u svemir emitiraju zvjezdani vjetrovi koji odnose velike količine čestica, tvari
+                iz zvijezda i na taj način zvijezda polako umanjuje svoju masu i usporava svoj razvoj jer se pri tome smanjuje i broj nuklearnih reakcija. Na koronu
+                i njenu emisiju zvjezdanih vjetrova osim mase, velik utjecaj ima i sjaj zvijezde, odnosno ukupna zvijezdina radijacija. A taj sjaj koji se mjeri u vatima
+                i nešto što se naziva magnitudom, koja je bezdimenzionalna veličina i mjeri prividni sjaj zvijezde promatran sa Zemlje, znanstvenicima 
+                omogućuje da izračunaju udaljenost te zvijezde od Zemlje na temelju razlike između magnitude i izmjerenog sjaja. Sjaj ovisno o zvijezdi može biti
+                promjenjiv (pulsirajuć, bljeskovit i dr.), a ukoliko zvijezda ima velik sjaj korona će stvarati i zvjezdanu maglicu (eng. nebula).
+                <br><br>
+                <div class="images">
+                    <figure>
+                        <img src="slike/nebula.jpg" alt="Zvjezdana maglica" >
+                        <figcaption>Zvjezdana maglica snimljena Hubble teleskopom , credit: NASA</figcaption>
+                    </figure>
+                </div>
+                <br> <br> <br>
+            </p6>
+            <p7>
+                I posljednje važno, usko vezano uz koronu, osnovnije obilježje svake zvijezde jest magnetsko polje. Magnetsko polje zvijezda nastaje zbog protoka 
+                elektrona unutar plazme koja gradi zvijezdu, a ono se ne zadržava samo unutar zvijezde, već se širi, proteže i obavija zvijezdu. Kao i 
+                mnogo drugih obilježja zvijezda, njegova snaga ovisi o masi zvijezde, ali i o njenom sastavu, tj. starosti. Zbog konstantne aktivnosti
+                zvijezde, njeno magnetsko polje gotovo nikada nema jednaku snagu te njime "može manipulirati" kako bi s vremenom usporila svoju rotaciju ili
+                utjecala na zvjezdane vjetrove. Posljedica njegova postojanja su i nastajanja zvjezdanih pjega, odnosno područja sa iznimno jakim magnetskim poljima.
+                koja su hladnija od okolnih dijelova zvijezde, ali zato uzrokuju dodatno zagrijavanje okolnih dijelova pa su tako često uzrok i pojavama koronalnih lukova, 
+                zvjezdanih baklji i koronalnih izbačaja mase iako ove pojave i ne moraju nužno uvijek biti vezane uz zvjezdane pjege.
+                <br> <br>
+                <div class="images">
+                    <figure>
+                        <img src="slike/polje.jpg" alt="Magnetsko polje zvijezde" >
+                        <figcaption>Magnetsko polje zvijezde</figcaption>
+                    </figure>
+                </div>
+            </p7>   
+        </div>
+
+        <div class="footer">
+                <adress>
+                    <pre>
+                    <i>
+                    Autor: Luka Uremović       Pokrovitelj: <a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a>       Klaićeva 1, Zagreb       Hrvatska
+                    </i>
+                    </pre>
+                </adress>
+        </div>
+    </div>
+
+
+</body>
+</html>

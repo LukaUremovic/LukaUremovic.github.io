@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <title>Početno o zvijezdama</title> 
+    <link rel="icon" type="image/x-icon" href="slike/logo.png">
+
+    <style>
+        @namespace url("http://www.w3.org/1999/xhtml");
+        :root{ scrollbar-color: rgb(210,210,210) rgb(42,42,46) }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            scrollbar-width: thin;
+        }
+        html{
+            height: 100%;
+            width: 100%;
+            font-family: Arial;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("slike/Pozadina(1).jpg");
+            background-repeat: repeat;
+            
+            
+        }
+
+        /* GRID MREŽA */
+        .grid-container{
+            height: 91%;
+            width: 100%;
+            display: grid;
+            grid-template-areas: 
+            'zvijezde nav_bar nav_bar nav_bar nav_bar'
+            'zvijezde podnaslov podnaslov podnaslov podnaslov'
+            'zvijezde tekstovi tekstovi tekstovi tekstovi'
+            'zvijezde tekstovi tekstovi tekstovi tekstovi'
+            'zvijezde tekstovi tekstovi tekstovi tekstovi'
+            'zvijezde tekstovi tekstovi tekstovi tekstovi';
+            row-gap: 1rem;
+            
+        }
+                   /* .grid-container > div{
+            background-color: rgba(71, 125, 125,0.5);  
+        }           */
+          
+        /* NASLOV */
+        .Naslov {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align : center;
+            font-size:2rem;
+            margin-left: 6rem;
+            grid-area: zvijezde;
+        }
+
+        .Podnaslov{
+            color: white;
+            width: auto;
+            height: auto;
+            margin-top: 2rem;
+            margin-left: 26rem;
+            font-size: 1.7rem;
+            grid-area: podnaslov;
+        }
+        
+
+        /*NAV BAR*/
+        .Nav_bar{
+            width: auto;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 23rem;
+            padding-top: 1.7rem;
+            padding-bottom: 7rem;
+            grid-area: nav_bar;
+          
+        
+        }
+        
+        ul{
+            list-style-type: none;
+            padding: 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        li a{
+            color: white;
+            font-size: 2.5rem ;
+            padding: 0rem 2rem;
+            text-decoration: none;
+        }
+        li  a:hover{
+            color: aquamarine;
+            text-decoration: underline;
+        }
+        li a:active{
+            color: white;
+        }
+        
+        /* TEKSTOVI */
+        .tekstovi{
+        color: rgb(239, 235, 226);
+        width: auto;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        text-align: left;
+        margin-left: 20rem;
+        grid-area: tekstovi;
+        }
+
+        hr{
+            color: white;
+            margin-right: 1rem;
+            width: 95%;
+        }
+        /* FOOTER */
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            color: white;
+            width: 100%;
+            height: 9%;
+            /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) */
+        }
+
+        #pokrovitelj{
+            color: #FFFF66;
+        }
+        
+        
+
+
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="Naslov"><h1> Zvijezde </h1></div>
+        <div class="Nav_bar">
+            <ul>
+                <li> <a href="#home" target="_self" style="color:aquamarine;">Početno</a> </li>
+                <li> <a href="Općenito.html" target="_self">Općenito</a> </li>
+                <li> <a href="Formacija.html" target="_self">Formacija</a> </li>
+                <li> <a href="Građa.html" target="_self">Građa</a> </li>
+                <li> <a href="Vrste.html" target="_self">Vrste</a> </li>
+            </ul>
+        </div>
+        <div class="Podnaslov"><h2>O čemu se tu radi...</h2></div>
+        <div class="tekstovi">
+            <p1> Na ovoj će se stranici pisati o zvijezdama kao svemirskim tijelima, a cilj iste je potaknuti čitatelje na dublje promišljanje o 
+                znanostima poput astronomije i fizike. Njenim promatranjem, razumjet ćete kolika je zapravo uloga fizike i svih grana fizike,
+                kao npr. klasične fizike, u promatranju i shvaćanju zvijezda.
+                
+            </p1> <br> <br> <hr>
+        </div>  
+    </div>
+    <footer>
+        <adress>
+            <pre>
+                <i>
+                Autor: Luka Uremović       Pokrovitelj: <a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a>       Klaićeva 1, Zagreb       Hrvatska
+                </i>
+            </pre>
+        </adress>
+    </footer>
+ 
+</body>
+</html>
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <title>Građa zvijezda</title>
+    <link rel="icon" type="image/x-icon" href="slike/logo.png">
+
+    <style>
+        @namespace url("http://www.w3.org/1999/xhtml");
+        :root{ scrollbar-color: rgb(210,210,210) rgb(42,42,46) }    
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scrollbar-width: thin;
+        }
+        html{
+            height: 100%;
+            width: 100%;
+            font-family: Arial;
+        }
+        body{
+            
+            height: 100%;
+            width: 100%;
+
+            background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("slike/svemir.jpg");
+             /* background: linear-gradient(#210535,#f5d5e0);*/
+            background-repeat:repeat;
+            background-size: cover;
+
+        }
+
+        /* GRID MREŽA */
+        .grid-container{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-areas:
+            'rječnik nav_bar nav_bar nav_bar nav_bar'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'footer footer footer footer footer';
+
+            gap: 6rem 2rem ;
+
+        }
+                /* .grid-container > div{
+                background-color: rgba(71, 125, 125,0.5);
+        }        */
+
+
+        /* RJEČNIK */
+        .rječnik{
+            margin-left: 2.5rem;
+            grid-area: rječnik;
+        }
+        .dropdown{
+            position: fixed;
+            display: inline-block;
+        }
+        .dropdown-riječi{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 10rem;
+            box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+            border-radius: 5%;
+            z-index: 1;
+        }
+        .dropdown-riječi a{
+            color: black;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+        }
+        .dropbtn{
+            text-align: center;
+            padding: 0.4rem;
+            border-radius: 62.42rem;
+            background-color: transparent;
+            border: transparent;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 2.5rem;
+            margin-top: 0.8rem;
+            cursor: pointer;
+            outline: aquamarine solid 0.37rem;
+        }
+
+
+        /*NAV BAR*/
+        .Nav_bar{
+            width: auto;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 2.5rem;
+            margin-top: 1%;
+            grid-area: nav_bar;
+            
+        }
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        li a{
+            color: white;
+            font-size: 2.5rem ;
+            padding: 0px 18px;
+            text-decoration: none;
+        }
+        li  a:hover{
+            color: aquamarine;
+            text-decoration: underline;
+        }
+        li a:active{
+            color: white;
+        }
+        .dropbtn:hover{
+            color: #cad7ff;
+            text-decoration: none;
+        }
+        .dropdown-riječi a:hover {background-color: #e6e6e6}
+
+        .dropdown:hover .dropdown-riječi {
+        display: block;
+        right: -0.8rem;
+        
+        }
+
+        /* TEKSTOVI */
+        .tekstovi{
+        color: rgb(239, 235, 226);
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        text-align: center;
+        margin-right: 6.5rem;
+
+        grid-area: tekstovi;
+        }
+
+        figure{
+            padding: 2rem;
+        }
+        figcaption{
+            font-family: 'Sherif';
+            font-size: 1.3rem;
+        }
+
+        .footer{
+            grid-area: footer;
+            text-align: center;
+            margin-right: 8rem;
+            font-size: 1rem;
+            color: white;
+            
+            
+
+            /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) */
+        }
+
+        #pokrovitelj{
+            color: #FFFF66;
+        }
+
+        .images{   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            width: 25em;
+            height: auto;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="Nav_bar">
+            <ul>
+                <li> <a href="Početna.html" target="_self">Početno</a> </li>
+                <li> <a href="Općenito.html" target="_self" >Općenito</a> </li>
+                <li> <a href="Formacija.html" target="_self">Formacija</a> </li>
+                <li> <a href="#home" target="_self" style="color:aquamarine;">Građa</a> </li>
+                <li> <a href="Vrste.html" target="_self">Vrste</a> </li>
+            </ul>
+        </div>
+        <div class="rječnik">
+            <div class="dropdown">
+                <button class="dropbtn" type="button">Rječnik</button>
+                <div class="dropdown-riječi">
+                    <a href="#">3. Newtonov zakon</a>
+                    <a href="#">Konvekcija</a>
+                    <a href="#">Kondukcija</a>
+                    <a href="#">Radijacija</a>
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="tekstovi">
+            <p1> 
+                Unutrašnjost svake stabilne zvijezde nalazi se u hidrostatskoj ravnoteži (eng. Hydrostatic equilibrium) zbog balansa postavljenog između
+                dvaju tlakova i dviju sila. Prva sila, također i jedna od četiri elementarne sile, je gravitacijska sila, dok je druga sila ona koja nastaje 
+                kao rezultat nuklearnih reakcija i razlike u tlakovima u središtu zvijezde i na površini zvijezde. Gravitacijska sila djeluje od površine 
+                zvijezde prema središtu iste, a druga sila djeluje iz središta prema van zbog toga što su tlak i temperatura u središtu veći i nastojeći 
+                izjednačiti te razlike stvara se sila koja je orijentirana prema površini. Takva ravnoteža neće se mijenjati iako se masa zvijezde postupno
+                smanjuje, čime se smanjuje i gravitacijska sila pa s obzirom na to da će tada gravitacijska sila manje pritiskati plazmu 
+                prema središtu gdje se odvija najviše nuklearnih reakcija, njih će biti manje i stvarat će se slabija protu-sila, sličan odnos dviju sila 
+                kao u 3. Newtonovom zakonu. <br> 
+                Gravitacijska sila također je odgovorna i za najveći dio same strukture zvijezde jer upravo ona "gura" novonastale atome težih elemenata 
+                prema jezgri zvijezde, gdje se tako počinje stvarati kugla izgrađena od težih elemenata koja se postupno širi i time pomiče zonu u 
+                kojoj se odvija najviše nuklearnih reakcija . <br> <br>
+            </p1>
+            <p2>
+                Za stabilnost svake zvijezde važna je i toplinska ravnoteža, ne samo tlačna, jer znamo kako temperature nisu ni približno jednake u središtu
+                i na površini zvijezde (zbog toga što se egzotermne nuklearne reakcije uglavnom odvijaju u jezgri zvijezde koju onda i zagrijavaju), a tijelo 
+                koje nema uspostavljenu toplinsku ravnotežu nikako ne može biti stabilno. Toplina tako doista i pokušava doći iz jezgre prema površini, 
+                no relativno brzo nailazi na problem, tzv. zonu radijacije. Zona radijacije je sloj, sferna ljuska u zvijezdi gdje je materija vrlo gusto 
+                nabijena, zbog nakupljanja atoma novonastalih elemenata, i ona usporava ili onemogućuje prijenos topline na standardne načine, kondukcijom, konvekcijom i radijacijom.
+                Tamo se u potpunosti zaustavlja prijenos topline konvekcijom jer plazma prestaje strujati i miruje, prijenos radijacijom drastično se usporava,
+                a kondukcija sama po sebi i nije najefikasniji način za prijenos velike količine energije unutar tijela velikog volumena, stoga je takav prijenos
+                vrlo spor. Prijenos radijacijom preko gama zraka koje putuju brzinom svjetlosti pak je drastično usporen zbog toga što se većina gama zraka
+                apsorbira unutar zone radijacije u gusto nabijenoj materiji, pa im je potrebno oko 171 000 godina kako bi uspješno prošle kroz zonu radijacije. 
+                No usprkos tomu prijenos topline radijacijom idalje je jedini dovoljno efikasan način da se omogući prijenos topline iz jezgre prema kovnektivnoj
+                zoni i površini i zato se ta zona upravo i naziva radijacijskom. Zanimljivo je da je taj prijenos toliko spor, da pad temperature prije i 
+                poslije zone radijacije obično iznosi oko 13,5 milijuna kelvina te je također zanimljivo da se kod nekih zvijezda konvektivna zona nalazi
+                bliže jezgri nego radijacijska, dok kod nekih manjih zvijezda, zona radijacije niti ne postoji . <br> <br>
+            </p2>
+            <p3>
+                Nakon zone radijacije i prijelazne zone, u unutrašnjosti zvijezde, slijedi konvektivna zona. Kao što joj i samo ime govori u njoj dolazi
+                do pojave konvekcije i prijenosa topline kovnekcijom, tj. miješanjem plazme iz dubine koja je toplija i površinske plazme koja je hladnija. Ona
+                također čini i posljedni sloj prije onog površinskog, fotosfere. Fotosfera je poput plinovite kore zvijezde, smatra ju se i najnižijim slojem 
+                zvjezdane atmosfere iako stvara dojam kao da je dio površine zvijezde i jedini je sloj u odnosu na sve prethodne,
+                koji je vidljiv iz svemira. U njoj konačno dolazi do emisije energije u svemir, što one toplinske koja je dugo putovala iz jezgre, a što 
+                one svjetlosne koja će se nastaviti širiti kroz svemir i na koncu eventualno dospijeti do naših očiju ukoliko bismo promatrali neku zvijezdu.
+                Na njoj se mogu nalaziti i prije spomenute pojave, zvjezdane pjege. Govoreći o obilježjima zvijezde, spomenuli smo i zvjezdane baklje, usko 
+                vezane uz pjege, no one se ne pojavljuju u samoj fotosferi, već u sloju iznad, tj. kromosferi. Kromosfera je prosječno visoka oko 2 000
+                kilometara i toplija je od fotosere. Na nju se nastavlja prijelazni sloj koji je obično vrlo visok i u njemu se događa porast temperature
+                i pad gustoće atmosfere, a na njega se nadovezuje korona. Korona ima vrlo malu gustoću, no temperatura u njoj može dostići i vrijednosti
+                od 1 000 000 K, što znanstvenici i dan danas ne mogu zasigurno objasniti. Iz nje će se dalje u svemir širiti zvjezdani vjetar, a ako uvjeti 
+                za to budu ostvareni širit će se i zvjezdana maglica.
+            
+
+            </p3>
+                
+              
+        </div>
+
+        <div class="footer">
+                <adress>
+                    <pre>
+                    <i>
+                    Autor: Luka Uremović       Pokrovitelj: <a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a>       Klaićeva 1, Zagreb       Hrvatska
+                    </i>
+                    </pre>
+                </adress>
+        </div>
+    </div>
+
+
+</body>
+</html>

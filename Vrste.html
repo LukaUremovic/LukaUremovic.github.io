@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrste zvijezda</title> 
+    <link rel="icon" type="image/x-icon" href="slike/logo.png">
+
+    <style>
+        html{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("slike/vrste.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-rows: 9rem 6.5rem 3rem 8rem;
+            grid-template-columns: auto auto auto auto;
+
+
+        }
+        .Naslov {
+            color: white;
+            text-align : center;
+            font-size: 2rem;
+            grid-column: 1/5;
+        }
+        
+        .rječnik{
+            text-align: center;
+            grid-row: 2/3;
+            grid-column: 1/2;
+
+        }
+        
+        .tekstovi{
+        color: rgb(239, 235, 226);
+        font-size: 22px;
+        margin-top: 0;
+        text-align: center;
+        grid-column: 2/4;
+        }
+
+        .Nav_bar{
+            grid-row: 2/3;
+            grid-column: 1/5;
+        }
+        /*Nav bar*/
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+        li a{
+            color: white;
+            font-size: 40px ;
+            padding: 0px 18px;
+            text-decoration: none;
+        }
+        li a:hover{
+            color: aquamarine;
+            text-decoration: underline;
+        }
+        li a:active{
+            color: aqua;
+        }
+        
+        
+
+
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="Naslov"><h1> Zvijezde </h1></div>
+        <div class="Nav_bar">
+            <ul>
+                <li> <a href="Početna.html" target="_self">Početno</a> </li>
+                <li> <a href="Općenito.html" target="_self">Općenito</a> </li>
+                <li> <a href="Formacija.html" target="_self">Formacija</a> </li>
+                <li> <a href="Građa.html" target="_self">Građa</a> </li>
+                <li> <a href="#home" target="_self" style="color:aquamarine;">Vrste</a> </li>
+            </ul>
+        </div>
+        <div class="rječnik"> <button type="button">Rječnik</button> </div>
+    <div class="tekstovi">
+        <p1> 
+            Zvijezde su svemirska globoidna, odnosno kuglasta tijela načinjena prvenstveno od plazme. </p1>
+    </div>  
+</body>
+</html>

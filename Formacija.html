@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formacija zvijezda</title>
+    <link rel="icon" type="image/x-icon" href="slike/logo.png"> 
+
+    <style>
+        @namespace url("http://www.w3.org/1999/xhtml");
+        :root{ scrollbar-color: rgb(210,210,210) rgb(42,42,46) } 
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scrollbar-width: thin;
+        }
+        html{
+            height: 100%;
+            width: 100%;
+            font-family: Arial;
+        }
+        body{
+            
+            height: 100%;
+            width: 100%;
+
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("slike/form.jpg");
+             /* background: linear-gradient(#210535,#f5d5e0);*/
+            background-repeat:repeat;
+            background-size: cover;
+
+        }
+
+        /* GRID MREŽA */
+        .grid-container{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-areas:
+            'rječnik nav_bar nav_bar nav_bar nav_bar'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'rječnik tekstovi tekstovi tekstovi tekstovi'
+            'footer footer footer footer footer';
+
+            gap: 6rem 2rem ;
+
+        }
+                /* .grid-container > div{
+                background-color: rgba(71, 125, 125,0.5);
+        }        */
+
+
+        /* RJEČNIK */
+        .rječnik{
+            margin-left: 2.5rem;
+            grid-area: rječnik;
+        }
+        .dropdown{
+            position: fixed;
+            display: inline-block;
+        }
+        .dropdown-riječi{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 10rem;
+            box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+            border-radius: 5%;
+            z-index: 1;
+        }
+        .dropdown-riječi a{
+            color: black;
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+        }
+        .dropbtn{
+            text-align: center;
+            padding: 0.4rem;
+            border-radius: 62.42rem;
+            background-color: transparent;
+            border: transparent;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 2.5rem;
+            margin-top: 0.8rem;
+            cursor: pointer;
+            outline: aquamarine solid 0.37rem;
+        }
+        
+
+
+        /*NAV BAR*/
+        .Nav_bar{
+            width: auto;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 2.5rem;
+            margin-top: 1%;
+            grid-area: nav_bar;
+            
+        }
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        li a{
+            color: white;
+            font-size: 2.5rem ;
+            padding: 0px 18px;
+            text-decoration: none;
+        }
+        li  a:hover{
+            color: aquamarine;
+            text-decoration: underline;
+        }
+        li a:active{
+            color: white;
+        }
+        .dropbtn:hover{
+            color: #ecb0b0;
+            text-decoration: none;
+        }
+        .dropdown-riječi a:hover {background-color: #e6e6e6}
+
+        .dropdown:hover .dropdown-riječi {
+        display: block;
+        right: -0.8rem;
+        
+        }
+
+        /* TEKSTOVI */
+        .tekstovi{
+        color: rgb(239, 235, 226);
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        text-align: center;
+        margin-right: 6.5rem;
+
+        grid-area: tekstovi;
+        }
+
+        figure{
+            padding: 2rem;
+        }
+        figcaption{
+            font-family: 'Sherif';
+            font-size: 1.3rem;
+        }
+
+        .footer{
+            grid-area: footer;
+            text-align: center;
+            margin-right: 8rem;
+            font-size: 1rem;
+            color: white;
+            
+            
+
+            /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) */
+        }
+
+        #pokrovitelj{
+            color: #FFFF66;
+        }
+
+        .images{   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            width: 25em;
+            height: auto;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="Nav_bar">
+            <ul>
+                <li> <a href="Početna.html" target="_self">Početno</a> </li>
+                <li> <a href="Općenito.html" target="_self">Općenito</a> </li>
+                <li> <a href="#home" target="_self" style="color:aquamarine;">Formacija</a> </li>
+                <li> <a href="Građa.html" target="_self">Građa</a> </li>
+                <li> <a href="Vrste.html" target="_self">Vrste</a> </li>
+            </ul>
+        </div>
+        <div class="rječnik">
+            <div class="dropdown">
+                <button class="dropbtn" type="button">Rječnik</button>
+                <div class="dropdown-riječi">
+                    <a href="#"></a>
+                    <a href="#"></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="tekstovi">
+            <p1> 
+                Formacija zvijezda, odnosno proces stvaranja novih zvijezda dugotrajan je proces. Preduvjet za stvaranje nove zvijezde je gusti 
+                međuzvjezdani oblak koji se pod utjecajem gravitacijske sile počinje komprimirati dok ne nastane kuglasti prototip zvijezde, tzv. protozvijezda.
+                No nastanak protozvijezde ne mora značiti da će iz nje sigurno i uvijek nastati zvijezda. Kako bi iz protozvijezde nastala zvijezda ta 
+                protozvijezda treba dostići određenu masu. Ako bi završna masa protozvijezde bila manja od jedne desetine Sunčeve mase, nova zvijezda ne bi
+                nastala zbog relativno slabe gravitacijske sile koja ne bi mogla zadovoljiti i omogućiti adekvatne uvjete, poput određenog tlaka i određene
+                temperature, neophodnih za početak nuklearnih reakcija koje bi zvijezdu držale na "životu". Protozvijezde čija je masa ekvivalentna barem
+                jednoj desetini od ukupne Sunčeve mase u središtu, u jezgri, postići će dovoljnu temperaturu za početak reakcija nuklearne fuzije
+                
+            </p1>
+            <p2>   
+            </p2>
+            
+        </div>
+
+        <div class="footer">
+                <adress>
+                    <pre>
+                    <i>
+                    Autor: Luka Uremović       Pokrovitelj: <a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a>       Klaićeva 1, Zagreb       Hrvatska
+                    </i>
+                    </pre>
+                </adress>
+        </div>
+    </div>
+
+
+</body>
+</html>
