@@ -26,6 +26,7 @@
             background-repeat: repeat;
             
             
+            
         }
 
         /* GRID MREŽA */
@@ -45,7 +46,7 @@
         }
                     /* .grid-container > div{
             background-color: rgba(71, 125, 125,0.5);  
-        }            */
+        }           */
           
         /* NASLOV */
         .Naslov {
@@ -150,14 +151,35 @@
             color: #FFFF66;
         }
         
-        @media only screen and (max-width: 1000px){
-            body{
+        /* body{
                 background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("slike/Pozadina.jpg");
-                background-size: cover;
-                
-                
+                background-size: cover; */
+        @media only screen and (max-width: 1740px){
+            #vrst{
+                display: none;
             }
         }
+        @media only screen and (max-width: 1584px){
+            #gra{
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 1418px){
+            #for{
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 1194px){
+            #opć{
+                display: none;
+            }
+        }
+
+            
+                
+                
+        
+        
         
 
 
@@ -169,11 +191,11 @@
         <div class="Naslov"><h1> Zvijezde </h1></div>
         <div class="Nav_bar">
             <ul>
-                <li> <a href="#home" target="_self" style="color:aquamarine;">Početno</a> </li>
-                <li> <a href="Općenito.html" target="_self">Općenito</a> </li>
-                <li> <a href="Formacija.html" target="_self">Formacija</a> </li>
-                <li> <a href="Građa.html" target="_self">Građa</a> </li>
-                <li> <a href="Vrste.html" target="_self">Vrste</a> </li>
+                <li id="poč"> <a href="#home" target="_self" style="color:aquamarine;">Početno</a> </li>
+                <li id="opć" > <a href="Općenito.html" target="_self">Općenito</a> </li>
+                <li id="for"> <a href="Formacija.html" target="_self">Formacija</a> </li>
+                <li id="gra"> <a href="Građa.html" target="_self">Građa</a> </li>
+                <li id="vrst"> <a href="Vrste.html" target="_self">Vrste</a> </li>
             </ul>
         </div>
         <div class="Podnaslov"><h2>O čemu se tu radi...</h2></div>
