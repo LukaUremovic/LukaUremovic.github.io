@@ -151,8 +151,7 @@
             color: #FFFF66;
         }
         
-        /* body{
-                background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("slike/Pozadina.jpg");
+        /* 
                 background-size: cover; */
         @media only screen and (max-width: 1740px){
             #vrst{
@@ -174,6 +173,60 @@
                 display: none;
             }
         }
+        
+        @media only screen and (max-width: 1121px){
+            body{
+                background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("slike/Pozadina.jpg");
+                background-size: cover; 
+            }
+            #vrst{
+                display:flex;
+            }
+            #gra{
+                display:flex;
+            }
+            #for{
+                display:flex;
+            }
+            #opć{
+                display:flex;
+            }
+            
+            .grid-container{
+                height: 91%;
+                width: 100%;
+                display: grid;
+                grid-template-areas: 
+                'zvijezde zvijezde zvijezde zvijezde zvijezde'
+                'nav_bar nav_bar nav_bar nav_bar nav_bar'
+                'podnaslov podnaslov podnaslov podnaslov podnaslov'
+                'tekstovi tekstovi tekstovi tekstovi tekstovi'
+                'tekstovi tekstovi tekstovi tekstovi tekstovi'
+                'tekstovi tekstovi tekstovi tekstovi tekstovi';
+                row-gap: 1rem;
+            }
+            .Naslov{
+                margin-left: 0rem;
+            }
+            .Nav_bar{
+                margin-left: 0rem;
+                padding-bottom: 4rem;
+            }
+            .Podnaslov{
+                margin-left: 0rem;
+                margin-top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .tekstovi{
+                margin-left: 0;
+                padding: 2rem;
+            }
+
+
+        }
+            
 
             
                 
@@ -191,11 +244,11 @@
         <div class="Naslov"><h1> Zvijezde </h1></div>
         <div class="Nav_bar">
             <ul>
-                <li id="poč"> <a href="#home" target="_self" style="color:aquamarine;">Početno</a> </li>
-                <li id="opć" > <a href="Općenito.html" target="_self">Općenito</a> </li>
-                <li id="for"> <a href="Formacija.html" target="_self">Formacija</a> </li>
-                <li id="gra"> <a href="Građa.html" target="_self">Građa</a> </li>
-                <li id="vrst"> <a href="Vrste.html" target="_self">Vrste</a> </li>
+                <li class="paljenje" id="poč"> <a href="#home" target="_self" style="color:aquamarine;">Početno</a> </li>
+                <li class="paljenje" id="opć" > <a href="Općenito.html" target="_self">Općenito</a> </li>
+                <li class="paljenje" id="for"> <a href="Formacija.html" target="_self">Formacija</a> </li>
+                <li class="paljenje" id="gra"> <a href="Građa.html" target="_self">Građa</a> </li>
+                <li class="paljenje" id="vrst"> <a href="Vrste.html" target="_self">Vrste</a> </li>
             </ul>
         </div>
         <div class="Podnaslov"><h2>O čemu se tu radi...</h2></div>
