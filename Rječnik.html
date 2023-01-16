@@ -43,8 +43,6 @@
             'tekstovi tekstovi tekstovi tekstovi tekstovi'
             'tekstovi tekstovi tekstovi tekstovi tekstovi'
             'tekstovi tekstovi tekstovi tekstovi tekstovi'
-            'tekstovi tekstovi tekstovi tekstovi tekstovi'
-            'tekstovi tekstovi tekstovi tekstovi tekstovi'
             'footer footer footer footer footer';
 
             gap: 6rem 2rem ;
@@ -128,18 +126,28 @@
             font-size: 1.3rem;
         }
 
+        /* FOOTER */
         .footer{
             grid-area: footer;
             text-align: center;
-            margin-right: 8rem;
-            font-size: 1rem;
             color: white;
+            padding: 2rem;
             
             
+            /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) */
         }
+        li i{
+            font-size: 1.1rem;
+            padding: 0rem 2rem; ;
+            font-family:monospace;
 
+        }
+        
         #pokrovitelj{
             color: #FFFF66;
+            font-size: 1.1rem;
+            padding-left: 1rem;
+            
         }
 
         .images{   
@@ -162,11 +170,11 @@
     <div class="grid-container">
         <div class="Nav_bar">
             <ul>
-                <li> <a href="index.html" target="_self">Početno</a> </li>
-                <li> <a href="Općenito.html" target="_self">Općenito</a> </li>
-                <li> <a href="Formacija.html" target="_self" >Formacija</a> </li>
-                <li> <a href="Građa.html" target="_self">Građa</a> </li>
-                <li> <a href="Vrste.html" target="_self">Vrste</a> </li>
+                <li  id="poč"> <a href="index.html" target="_self">Početno</a> </li>
+                <li  id="opć" > <a href="Općenito.html" target="_self">Općenito</a> </li>
+                <li  id="for"> <a href="Formacija.html" target="_self">Formacija</a> </li>
+                <li  id="gra"> <a href="Građa.html" target="_self">Građa</a> </li>
+                <li  id="vrst"> <a href="Vrste.html" target="_self">Vrste</a> </li>
                 <li> <a href="#home.html" target="_self" style="color:aquamarine;">Rječnik</a> </li>
             </ul>
         </div>
@@ -294,13 +302,13 @@
         </div>
 
         <div class="footer">
-                <adress>
-                    <pre>
-                    <i>
-                    Autor: Luka Uremović       Pokrovitelj: <a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a>       Klaićeva 1, Zagreb       Hrvatska
-                    </i>
-                    </pre>
-                </adress>
+            <ul class="foot">
+                <li><i>Autor: Luka Uremović</i></li>
+                <li><i>Pokrovitelj:<a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a></i></li>
+                <li><i>Klaićeva 1, Zagreb</i></li>
+                <li><i>Hrvatska</i></li>
+                
+            </ul>
         </div>
     </div>
 

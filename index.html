@@ -40,7 +40,9 @@
             'zvijezde tekstovi tekstovi tekstovi tekstovi'
             'zvijezde tekstovi tekstovi tekstovi tekstovi'
             'zvijezde tekstovi tekstovi tekstovi tekstovi'
-            'zvijezde tekstovi tekstovi tekstovi tekstovi';
+            'zvijezde tekstovi tekstovi tekstovi tekstovi'
+            'zvijezde tekstovi tekstovi tekstovi tekstovi'
+            'footer footer footer footer footer ';
             row-gap: 1rem;
             
         }
@@ -59,6 +61,7 @@
             text-align : center;
             font-size:2rem;
             margin-left: 6rem;
+            padding-top: 5rem;
             grid-area: zvijezde;
         }
 
@@ -136,19 +139,27 @@
             width: 95%;
         }
         /* FOOTER */
-        footer{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1rem;
+        .footer{
+            grid-area: footer;
+            text-align: center;
             color: white;
-            width: 100%;
-            height: 9%;
+            padding-top: 2rem;
+            
+            
             /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) */
         }
+        li i{
+            font-size: 1.1rem;
+            padding: 0rem 2rem; ;
+            font-family:monospace;
 
+        }
+        
         #pokrovitelj{
             color: #FFFF66;
+            font-size: 1.1rem;
+            padding-left: 1rem;
+            
         }
         
         /* 
@@ -168,13 +179,9 @@
                 display: none;
             }
         }
-        @media only screen and (max-width: 1194px){
-            #opć{
-                display: none;
-            }
-        }
+       
         
-        @media only screen and (max-width: 1121px){
+        @media only screen and (max-width: 1198px){
             body{
                 background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("slike/Pozadina.jpg");
                 background-size: cover; 
@@ -188,9 +195,7 @@
             #for{
                 display:flex;
             }
-            #opć{
-                display:flex;
-            }
+            
             
             .grid-container{
                 height: 91%;
@@ -244,11 +249,11 @@
         <div class="Naslov"><h1> Zvijezde </h1></div>
         <div class="Nav_bar">
             <ul>
-                <li class="paljenje" id="poč"> <a href="#home" target="_self" style="color:aquamarine;">Početno</a> </li>
-                <li class="paljenje" id="opć" > <a href="Općenito.html" target="_self">Općenito</a> </li>
-                <li class="paljenje" id="for"> <a href="Formacija.html" target="_self">Formacija</a> </li>
-                <li class="paljenje" id="gra"> <a href="Građa.html" target="_self">Građa</a> </li>
-                <li class="paljenje" id="vrst"> <a href="Vrste.html" target="_self">Vrste</a> </li>
+                <li  id="poč"> <a href="#home" target="_self" style="color:aquamarine;">Početno</a> </li>
+                <li  id="opć" > <a href="Općenito.html" target="_self">Općenito</a> </li>
+                <li  id="for"> <a href="Formacija.html" target="_self">Formacija</a> </li>
+                <li  id="gra"> <a href="Građa.html" target="_self">Građa</a> </li>
+                <li  id="vrst"> <a href="Vrste.html" target="_self">Vrste</a> </li>
             </ul>
         </div>
         <div class="Podnaslov"><h2>O čemu se tu radi...</h2></div>
@@ -260,15 +265,22 @@
             </p1> <br> <br> <hr>
         </div>  
     </div>
-    <footer>
-        <adress>
-            <pre>
-                <i>
-                Autor: Luka Uremović       Pokrovitelj: <a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a>       Klaićeva 1, Zagreb       Hrvatska
-                </i>
-            </pre>
-        </adress>
-    </footer>
+    <div class="footer">
+        <ul class="foot">
+            <li><i>Autor: Luka Uremović</i></li>
+            <li><i>Pokrovitelj:<a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a></i></li>
+            <li><i>Klaićeva 1, Zagreb</i></li>
+            <li><i>Hrvatska</i></li>
+            
+        </ul>
+    </div>
+    
+        
+           
+            
+            
+        
+    </div>
  
 </body>
 </html>
