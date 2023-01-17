@@ -2,7 +2,7 @@
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
-    <meta name=""viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>Početno o zvijezdama</title> 
     <link rel="icon" type="image/x-icon" href="slike/logo.png">
 
@@ -32,7 +32,7 @@
 
         /* GRID MREŽA */
         .grid-container{
-            height: 91%;
+            height: 100%;
             width: 100%;
             display: grid;
             grid-template-areas: 
@@ -43,13 +43,15 @@
             'zvijezde tekstovi tekstovi tekstovi tekstovi'
             'zvijezde tekstovi tekstovi tekstovi tekstovi'
             'zvijezde tekstovi tekstovi tekstovi tekstovi'
+            'zvijezde tekstovi tekstovi tekstovi tekstovi'
+            'zvijezde tekstovi tekstovi tekstovi tekstovi'
             'footer footer footer footer footer ';
             row-gap: 1rem;
             
         }
-                    /* .grid-container > div{
+                     /* .grid-container > div{
             background-color: rgba(71, 125, 125,0.5);  
-        }           */
+        }            */
           
         /* NASLOV */
         .Naslov {
@@ -78,10 +80,12 @@
         }
         
 
-
+        .Nav_bar-660{
+            display: none;
+        }
         /*NAV BAR*/
         .Nav_bar{
-            width: 90vw;
+            width: auto;
             height: auto;
             display: flex;
             justify-content: center;
@@ -124,61 +128,7 @@
         li a:active{
             color: white;
         }
-        /* NAV_BAR-660 */
         
-        .Nav_bar-660{
-            text-align: center;
-            display: none;
-            grid-area: Nav_bar-660;
-            padding: 4rem;
-        }
-        .dropdown{
-            display: inline-block;
-        }
-        .dropdown-riječi{
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 10rem;
-            box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
-            border-radius: 5%;
-            z-index: 1;
-        }
-        .dropdown-riječi a{
-            color: black;
-            padding: 0.75rem 1rem;
-            text-decoration: none;
-            display: block;
-        }
-        .dropbtn{
-            text-align: center;
-            padding: 1rem 5rem;
-            border-radius: 62.42rem;
-            background-color: rgba(0,0,0,0.75);
-            border: transparent;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 2.5rem;
-
-            
-            cursor: pointer;
-            outline: aquamarine solid 0.37rem;
-
-        }
-
-        .dropbtn:hover{
-            color: #cdcdf7;
-            text-decoration: none;
-        }
-        .dropdown-riječi a:hover {background-color: #e6e6e6}
-
-        .dropdown:hover .dropdown-riječi {
-        display: block;
-        
-        
-        }
         /* TEKSTOVI */
         .tekstovi{
         color: rgb(239, 235, 226);
@@ -196,11 +146,19 @@
             width: 95%;
         }
         /* FOOTER */
+        .foot{
+            list-style-type: none;
+            padding: 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+
+        }
         .footer{
             grid-area: footer;
             text-align: center;
             color: white;
-            padding-top: 2rem;
+            padding-top: 3rem;
             
             
             /* background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) */
@@ -255,7 +213,7 @@
             
             
             .grid-container{
-                height: 91%;
+                height: 100%;
                 width: 100%;
                 display: grid;
                 grid-template-areas: 
@@ -264,7 +222,8 @@
                 'podnaslov podnaslov podnaslov podnaslov podnaslov'
                 'tekstovi tekstovi tekstovi tekstovi tekstovi'
                 'tekstovi tekstovi tekstovi tekstovi tekstovi'
-                'tekstovi tekstovi tekstovi tekstovi tekstovi';
+                'tekstovi tekstovi tekstovi tekstovi tekstovi'
+                'footer footer footer footer footer ';
                 row-gap: 1rem;
             }
             .Naslov{
@@ -300,6 +259,13 @@
         }
 
         @media only screen and (max-width: 660px){
+            body{
+                background-size: cover;
+                background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("slike/Pozadina miror.jpg");
+                background-repeat: repeat;
+                
+                
+            }
             .grid-container{
                 height: 91%;
                 width: 100%;
@@ -310,19 +276,87 @@
                 'podnaslov podnaslov podnaslov podnaslov podnaslov'
                 'tekstovi tekstovi tekstovi tekstovi tekstovi'
                 'tekstovi tekstovi tekstovi tekstovi tekstovi'
-                'tekstovi tekstovi tekstovi tekstovi tekstovi';
+                'tekstovi tekstovi tekstovi tekstovi tekstovi'
+                'footer footer footer footer footer ';
                 row-gap: 1rem;
             }
+            /* NAV_BAR-660 */
+        
             .Nav_bar-660{
+                text-align: center;
+                display: block;
+                grid-area: Nav_bar-660;
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+            .dropdown{
                 display: inline-block;
+                width: 90vw;
+            }
+            .dropdown-riječi{
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 10rem;
+                box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+                border-radius: 10%;
+                z-index: 1;
+            }
+            .dropdown-riječi a{
+                color: black;
+                padding: 0.75rem 1rem;
+                text-decoration: none;
+                width: 90vw;
+                display: block;
+                font-size: 2rem;
+            }
+            .dropbtn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90vw;
+                padding: 0.3rem 5rem;
+                border-radius: 62.42rem;
+                background-color: rgba(0,0,0,0.5);
+                border: transparent;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 2.5rem;
+
+                
+                cursor: pointer;
+                outline: aquamarine solid 0.37rem;
+
+            }
+
+            .dropbtn:hover{
+                color: #cdcdf7;
+                text-decoration: none;
+            }
+            .dropdown-riječi a:hover {background-color: #e6e6e6}
+
+            .dropdown:hover .dropdown-riječi {
+            display: block;
+            
+            
+            }
+            .foot{
+                flex-direction: column;
             }
             .Nav_bar{
                 display: none;
             }
-            .tekstovi{
-                font-size: 28px;
+        
+        @media only screen and (max-width: 436px){
+            .Podnaslov{
+                font-size: 1.4rem;
             }
+            
+
         }
+    }
+
 
             
 
@@ -369,16 +403,16 @@
                 
             </p1> <br> <br> <hr>
         </div>  
-    </div>
-    <div class="footer">
-        <ul class="foot">
-            <li><i>Autor: Luka Uremović</i></li>
-            <li><i>Pokrovitelj:<a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a></i></li>
-            <li><i>Klaićeva 1, Zagreb</i></li>
-            <li><i>Hrvatska</i></li>
-            
-        </ul>
-    </div>
+    
+        <div class="footer">
+            <ul class="foot">
+                <li><i>Autor: Luka Uremović</i></li>
+                <li><i>Pokrovitelj:<a id="pokrovitelj" href="http://www.petagimnazija.hr/">V.gimnazija</a></i></li>
+                <li><i>Klaićeva 1, Zagreb</i></li>
+                <li><i>Hrvatska</i></li>
+                
+            </ul>
+   
     
         
            
