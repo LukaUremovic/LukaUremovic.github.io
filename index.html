@@ -361,6 +361,102 @@
             
 
         }
+        @media only screen and (orientation:landscape)and (max-width: 800px){
+            body{
+                
+                background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("slike/Pozadina.jpg");
+                background-repeat: repeat;
+                background-size: 100vw;
+                
+                
+                
+            }
+            .grid-container{
+                height: 91%;
+                width: 100%;
+                display: grid;
+                grid-template-areas: 
+                'zvijezde zvijezde zvijezde zvijezde zvijezde'
+                'Nav_bar-660 Nav_bar-660 Nav_bar-660 Nav_bar-660 Nav_bar-660'
+                'podnaslov podnaslov podnaslov podnaslov podnaslov'
+                'tekstovi tekstovi tekstovi tekstovi tekstovi'
+                'tekstovi tekstovi tekstovi tekstovi tekstovi'
+                'tekstovi tekstovi tekstovi tekstovi tekstovi'
+                'footer footer footer footer footer ';
+                row-gap: 1rem;
+            }
+            /* NAV_BAR-660 */
+        
+            .Nav_bar-660{
+                text-align: center;
+                display: block;
+                grid-area: Nav_bar-660;
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+            .dropdown{
+                display: inline-block;
+                width: 90vw;
+            }
+            .dropdown-riječi{
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 10rem;
+                box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2);
+                border-radius: 10%;
+                z-index: 1;
+            }
+            .dropdown-riječi a{
+                color: black;
+                padding: 0.75rem 1rem;
+                text-decoration: none;
+                width: 90vw;
+                display: block;
+                font-size: 2rem;
+            }
+            .dropbtn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90vw;
+                padding: 0.3rem 5rem;
+                border-radius: 62.42rem;
+                background-color: rgba(0,0,0,0.5);
+                border: transparent;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                font-size: 2.5rem;
+
+                
+                cursor: pointer;
+                outline: aquamarine solid 0.37rem;
+
+            }
+
+            .dropbtn:hover{
+                color: #cdcdf7;
+                text-decoration: none;
+            }
+            .dropdown-riječi a:hover {background-color: #e6e6e6}
+
+            .dropdown:hover .dropdown-riječi {
+            display: block;
+            
+            
+            }
+            .foot{
+                flex-direction: column;
+                padding-bottom: 1rem;
+
+            }
+            .Nav_bar{
+                display: none;
+            }
+        }
+
+        
 
         
 
