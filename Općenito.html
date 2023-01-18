@@ -5,12 +5,7 @@
     <meta name=""viewport" content="width=device-width, initial-scale=1.0">
     <title>Općenito o zvijezdama</title>
     <link rel="icon" type="image/x-icon" href="slike/logo.png">
-    <script> 
-        if ($(window).width() < 1040){
-                document.getElementsByClassName(dropbtn).onclick = null;                                                
-            }
-                                                              
-    </script>
+
     <style>
         @namespace url("http://www.w3.org/1999/xhtml");
         :root{ scrollbar-color: rgb(210,210,210) rgb(42,42,46) }    
@@ -258,7 +253,7 @@
         </div>
         <div class="rječnik">
             <div class="dropdown">
-                <button class="dropbtn" type="button" onclick="window.location.href='Rječnik.html'">Rječnik</button>
+                <button class="dropbtn" type="button">Rječnik</button>
                 <div class="dropdown-riječi">
                     <a href="Rječnik.html#Plazma">Plazma</a>
                     <a href="Rječnik.html#SvjetGod">Svjetlosna godina</a>
@@ -380,6 +375,14 @@
         </div>
     </div>
 
+    <script> 
 
+            document.getElementsByClassName('dropbtn')[0].addEventListener('click', () => {
+                if (window.innerWidth > 1040){
+                    window.location.href = "Rječnik.html"
+                } 
+            });                                            
+                                                                  
+        </script>
 </body>
 </html>
